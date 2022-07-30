@@ -5,7 +5,7 @@ LABEL maintainer="Chuwen <i@nowtime.cc>" version="0.1"
 
 ARG timezone
 ENV TIMEZONE=${timezone:-"Etc/GMT"} \
-    APP_ENV=prod \
+    # APP_ENV=prod \
     SCAN_CACHEABLE=(true)
 
 # PHP 扩展
