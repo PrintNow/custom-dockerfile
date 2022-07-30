@@ -23,17 +23,18 @@ docker_build_push() {
 
   swoole_version="$1"
   http_proxy_url="http://127.0.0.1:7890"
+  php_extensions="csv inotify"
 
   echo_b "开始构建镜像：$swoole_version"
   docker build \
     --build-arg HTTP_ROXY="$http_proxy_url" \
     --build-arg HTTPS_ROXY="$http_proxy_url" \
+    --build-arg PHP_EXTENSIONS="$php_extensions" \
     --build-arg PHPSWOOLE_VERSION="$swoole_version" \
     -t shine09/php:"$swoole_version" .
 
   # 捕获是否异常
   [ $? -eq 0 ] || exit 1
-
   echo_g "构建镜像完成！\n"
 
   echo_b "开始推送镜像：$swoole_version"
