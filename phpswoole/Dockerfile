@@ -16,7 +16,7 @@ ENV PHP_EXTENSIONS=${PHP_EXTENSIONS:-""}
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
 # 安装扩展、设置时区
-RUN install-php-extensions pcntl redis pdo_mysql "$PHP_EXTENSIONS" \
+RUN install-php-extensions pcntl redis pdo_mysql ${PHP_EXTENSIONS} \
     # - config timezone
     && ln -sf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
     && echo "${TIMEZONE}" > /etc/timezone \
