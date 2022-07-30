@@ -36,7 +36,7 @@ docker_build_push() {
   docker build \
     --build-arg PHP_EXTENSIONS="$php_extensions" \
     --build-arg PHPSWOOLE_VERSION="$swoole_version" \
-    -t shine09/php:"$swoole_version" .
+    -t shine09/php:swoole:"$swoole_version" .
   # --build-arg HTTP_ROXY="$http_proxy_url" \
   # --build-arg HTTPS_ROXY="$http_proxy_url" \
 
