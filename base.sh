@@ -44,7 +44,7 @@ docker_build_push() {
 # 定义数组变量
 declare -a PHPSWOOLE_VERSION_ARRAY
 PHPSWOOLE_VERSION_ARRAY=(
-  "4.8-php8.1-alphine"
+  "4.8-php8.1-alpine"
   "4.8-php8.1"
   "4.8-php8.1-dev"
 )
