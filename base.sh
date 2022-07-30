@@ -37,7 +37,7 @@ docker_build_push() {
   echo_g "构建镜像完成！\n"
 
   echo_b "开始推送镜像：$swoole_version"
-  docker push shine09/php:"$swoole_version"
+  docker push shine09/php:swoole-"$swoole_version"
   echo_g "推送镜像完成！\n"
 }
 
