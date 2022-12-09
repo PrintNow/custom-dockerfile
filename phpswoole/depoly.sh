@@ -23,7 +23,7 @@ docker_build_push() {
 
   http_proxy_url="http://127.0.0.1:7890"
   swoole_version="$1"
-  php_extensions="csv"
+  php_extensions="csv bcmath"
 
   echo_b "开始构建镜像：$swoole_version"
 
